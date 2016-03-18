@@ -16,19 +16,18 @@ mqttc.connect("10.43.28.194")
 regSpaces = 17
 available = 17
 
-
 def on_connect(client, userdata, flags, rc):
     client.subscribe("zone_1")
 
 def on_message(client, userdata, message):
     available -= 1
-    displayUpdate(display, avSpaces, regSpaces)
+    sensors.displayUpdate(display, avSpaces, regSpaces)
 
 mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
 while(True):
-    if doubleTouchPulse(touch):
+    if sensors.doubleTouchPulse(touch):
         avSpaces +=1
         mqttc.publish("zone_1", "zone_2")
-        displayUpdate(display, avSpaces, regSpaces)
+        sensors.displayUpdate(display, avSpaces, regSpaces)
