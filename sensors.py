@@ -7,7 +7,7 @@ def checkTouchPulse(touch):
             if not touch.isPressed():
                 return True
     return False
-
+    
 def checkButtonPulse(button):
 if button.value() != 0:
     while True:
