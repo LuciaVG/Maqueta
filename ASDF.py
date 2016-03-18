@@ -6,7 +6,7 @@ import pyupm_grove as grove
 
 gServo = servo.ES08A(5)
 button = grove.GroveButton(6)
-touch = ttp223.TTP223(0)
+touch = ttp223.TTP223(7)
 
 def checkTouchPulse(touch):
     if touch.isPressed():
