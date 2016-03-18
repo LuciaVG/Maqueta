@@ -22,7 +22,6 @@ mqttc.on_connect = on_connect
 mqttc.on_message = on_message
 
 while(True):
-    print sensors.doubleTouchPulse(touch) 
     if sensors.doubleTouchPulse(touch):
         avSpaces +=1
         mqttc.publish("zone_1", "zone_2")
