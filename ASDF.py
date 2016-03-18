@@ -14,7 +14,7 @@ display = lcd.Jhd1313m1(0, 0x3E, 0x62)
 mqttc = mqtt.Client("zone_2")
 mqttc.connect("10.43.28.194")
 regSpaces = 17
-available = 17
+avSpaces = regSpaces
 
 def on_connect(client, userdata, flags, rc):
     client.subscribe("zone_1")
