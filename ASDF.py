@@ -11,4 +11,4 @@ while(True):
     if button.value() == 1:
         gServo.setAngle(90)
         time.sleep(1)
-        gServo.setAngle(-90)
+        gServo.setAngle(0)
