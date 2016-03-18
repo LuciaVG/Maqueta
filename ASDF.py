@@ -4,7 +4,7 @@ import pyupm_grove as grove
 
 
 gServo = servo.ES08A(5)
-button = grove.GroveButton(0)
+button = grove.GroveButton(6)
 
 
 while(True):
@@ -12,4 +12,3 @@ while(True):
         gServo.setAngle(90)
         time.sleep(1)
         gServo.setAngle(-90)
-    
