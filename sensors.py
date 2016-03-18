@@ -10,9 +10,9 @@ def checkTouchPulse(touch):
 
 def checkButtonPulse(button):
 if button.value() != 0:
-        while True:
-            if button.value() == 0:
-                return True
+    while True:
+        if button.value() == 0:
+            return True
     return False
 
 def doubleTouchPulse(touch):
