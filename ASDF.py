@@ -2,13 +2,9 @@ import time
 import sensors
 import pyupm_i2clcd as lcd
 import pyupm_ttp223 as ttp223
-import pyupm_servo as servo
-import pyupm_grove as grove
 import paho.mqtt.client as mqtt
 
 
-gServo = servo.ES08A(5)
-button = grove.GroveButton(6)
 touch = ttp223.TTP223(7)
 display = lcd.Jhd1313m1(0, 0x3E, 0x62)
 mqttc = mqtt.Client("zone_2")
